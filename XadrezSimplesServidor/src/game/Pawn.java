@@ -1,5 +1,6 @@
 package game;
 
+import java.util.Set;
 import util.Constants;
 
 /**
@@ -13,7 +14,12 @@ public class Pawn extends Piece  {
     }
 
     @Override
-    public boolean Move(Location move) {
+    public Set<Location> getMovementChoices() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Set<Location> getAttackChoices() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
     

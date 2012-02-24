@@ -1,5 +1,6 @@
 package game;
 
+import java.util.Set;
 import util.Constants.Color;
 import util.Constants.PieceType;
 
@@ -19,8 +20,10 @@ public abstract class Piece {
         this.color = color;
         this.type = type;
     }
-
-    public abstract boolean Move(Location move);
+  
+    public abstract Set<Location> getMovementChoices();
+    
+    public abstract Set<Location> getAttackChoices();
 
     public Board getBoard() {
         return board;

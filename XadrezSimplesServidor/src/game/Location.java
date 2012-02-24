@@ -46,4 +46,30 @@ public class Location {
     boolean isValid() {
         return (column >= 0 && line >= 0 && column <= 7 && line <= 7);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Location other = (Location) obj;
+        if (this.line != other.line) {
+            return false;
+        }
+        if (this.column != other.column) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 41 * hash + this.line;
+        hash = 41 * hash + this.column;
+        return hash;
+    }
 }

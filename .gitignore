@@ -2,3 +2,5 @@ build
 nbproject/private
 dist
 
+/XadrezSimplesServidor/nbproject/private/
+/XadrezSimplesCliente/nbproject/private/
